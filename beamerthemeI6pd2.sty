@@ -9,24 +9,27 @@
 \definecolor{redLaval}{rgb}{1.,.2,0.}
 \definecolor{yellowLaval}{rgb}{1.,.8,0.}
 \definecolor{grayLaval}{rgb}{.2,.2,.2}
+\definecolor{norlabCharcoal}{RGB}{81, 81, 81}
+\definecolor{norlabGray}{RGB}{150, 150, 150}
+\definecolor{norlabBlue}{RGB}{56, 129, 236}
 
 \setbeamercolor{headline}{fg=tabutter,bg=white}
 \setbeamercolor{footline}{fg=tabutter, bg=ta3gray}
 \setbeamerfont{footline}{size=\large,series=\tt}
-\setbeamercolor{separation line}{bg=ta2orange}
-\setbeamercolor{title in headline}{fg=tauca}
-\setbeamercolor{author in headline}{fg=grayLaval}
-\setbeamercolor{institute in headline}{fg=grayLaval}
+\setbeamercolor{separation line}{bg=norlabCharcoal}
+\setbeamercolor{title in headline}{fg=black}
+\setbeamercolor{author in headline}{fg=norlabCharcoal}
+\setbeamercolor{institute in headline}{fg=norlabCharcoal}
 
-\setbeamercolor{framesubtitle}{fg=ta3orange, bg=black}
-\setbeamercolor{author in head/foot}{fg=ta2orange, bg=black}
-\setbeamercolor{title in head/foot}{fg=ta2orange, bg=black}
+\setbeamercolor{framesubtitle}{fg=norlabBlue, bg=black}
+\setbeamercolor{author in head/foot}{fg=norlabGray, bg=black}
+\setbeamercolor{title in head/foot}{fg=norlabGray, bg=black}
 
-\setbeamercolor*{normal text}{fg=black, bg=tauca}
+\setbeamercolor*{normal text}{fg=black, bg=white}
 \setbeamercolor*{block body}{bg=white,fg=black}
-\setbeamercolor*{block title}{fg=yellowLaval,bg=ta2gray}
+\setbeamercolor*{block title}{fg=white,bg=norlabBlue}
 \setbeamerfont{block title}{size=\large,series=\bf}
-\setbeamercolor{upper separation line head}{fg=ta2orange}
+\setbeamercolor{upper separation line head}{fg=norlabBlue}
 
 \setbeamercolor*{example body}{fg=ta3aluminium,bg=black}
 \setbeamercolor*{example text}{fg=ta3aluminium,bg=black}
@@ -43,9 +46,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \setbeamertemplate{block begin}{
   \vskip.75ex
-  \begin{beamercolorbox}[ht=3.5ex,dp=0.5ex,center,leftskip=-1em,colsep*=.75ex]{block title}%
+  \begin{beamercolorbox}[ht=4ex,leftskip=-1em,colsep*=.75ex]{block title}%
     \usebeamerfont*{block title}%
-    {\phantom{Gg}\insertblocktitle}% phantom because of baseline problem
+    {\vskip1ex\phantom{Gg}\insertblocktitle}% phantom because of baseline problem
   \end{beamercolorbox}%
   {\ifbeamercolorempty[bg]{block body}{}{\nointerlineskip\vskip-0.5pt}}%
   \usebeamerfont{block body}%
@@ -62,20 +65,20 @@
 
   \begin{beamercolorbox}[wd=\paperwidth]{headline}
   	\center
-  	\vskip2ex
+  	\vskip1ex
   	\usebeamercolor{title in headline}{\color{fg}\textbf{\LARGE{\inserttitle}}}
 	\begin{columns}[T]
+	  %\begin{column}{.001\paperwidth}
+	  %\end{column}
 	  \begin{column}{.01\paperwidth}
-	  \end{column}
-	  \begin{column}{.05\paperwidth}
-		\vskip2ex
+		\vskip11ex
 		\begin{center}
-		\includegraphics[height=7cm]{figures/logo.png}
+		\includegraphics[height=3.5cm]{figures/labUlavalLogo.pdf}
 		\end{center}
-		\vskip2ex
+		%\vskip9ex
 	\end{column}
-	\begin{column}{.65\paperwidth}
-		\vskip6ex
+	\begin{column}{.7\paperwidth}
+		\vskip2ex
 		\raggedleft
 %		\usebeamercolor{title in headline}{\color{fg}\textbf{\LARGE{\inserttitle}}\\[1ex]}
 		\usebeamercolor{author in headline}{\color{fg}\Large{\insertauthor}\\[1ex]}
@@ -83,10 +86,10 @@
 	\end{column}
 	\begin{column}{.005\paperwidth}
 	\end{column}
-	\begin{column}{.25\paperwidth}
-		\vskip7ex
+	\begin{column}{.125\paperwidth}
+		\vskip11ex
 		\begin{center}
-		\includegraphics[width=16cm]{figures/labLogo.pdf}
+		\includegraphics[height=3.5cm]{figures/icraLogo.png}
 		\end{center}
 	\end{column}
 	
@@ -95,7 +98,7 @@
   \end{beamercolorbox}
 
   \begin{beamercolorbox}[wd=\paperwidth]{lower separation line head}
-    \rule{0pt}{3pt}
+    \rule{0pt}{1pt}
   \end{beamercolorbox}
 }
 
